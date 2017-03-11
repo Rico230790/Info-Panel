@@ -22,7 +22,7 @@ namespace Info_Panel
 
         public void EditFlight(FlightModels flight)
         {
-
+            null;
         }
 
         void Show()
