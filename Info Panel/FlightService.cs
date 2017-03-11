@@ -8,11 +8,11 @@ namespace Info_Panel
 {
     class FlightService
     {
-        private List<Flight> flights = new List<Flight>();
+        private List<FlightModels> flights = new List<FlightModels>();
         
-        public void AddFlight(Flight flight)
+        public void AddFlight(FlightModels flight)
         {
-            
+            flights.Add(flight);
         }
 
         public void RemoveFlight(int flightId)
@@ -20,10 +20,32 @@ namespace Info_Panel
             
         }
 
-        public void EditFlight(Flight flight)
+        public void EditFlight(FlightModels flight)
         {
-           
+
         }
+
+        void Show()
+        {
+            ICollection<FlightModels> t;
+            ICollection<FlightModels> v;
+            foreach (var flight in flights)
+            {
+                switch (flight.FType)
+                {
+                        case FlightTypes.Arrival:
+                        t.Add(flight);
+                        break;
+                }
+            }
+
+        }
+
+        public T Find<T>(int fNum) where T : FlightModels, new()
+        {
+            return null;
+        }
+
     }
     
 }

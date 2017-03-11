@@ -16,24 +16,26 @@ namespace Info_Panel
         public int Id { get; set; }
         public string FNumber { get; set; }
         public string AirLine { get; set; }
-        public string TerminalGate { get; set; }
+        public string Terminal { get; set; }
+        public string Gate { get; set; }
         public string City { get; set; }
         public DateTime FTime { get; set; }
         public FlightTypes FType { get; set; }
 
-        public FlightModels(int Id, string FNumber, string AirLine, string City, string TerminalGate, DateTime FTime, FlightTypes FType)
+        public FlightModels(int Id, string FNumber, string AirLine, string City, string Terminal, string Gate, DateTime FTime, FlightTypes FType)
         {
             this.Id = Id;
             this.FNumber = FNumber;
             this.AirLine = AirLine;
             this.City = City;
-            this.TerminalGate = TerminalGate;
+            this.Terminal = Terminal;
+            this.Gate = Gate;
             this.FTime = FTime;
             this.FType = FType;
         }
         public override string ToString()
         {
-            return $"{Id} - {FNumber} - {AirLine} - {City} - {TerminalGate} - {FTime}";
+            return $"{Id} - {FNumber} - {AirLine} - {City} - {Terminal} - {Gate} - {FTime}";
         }
     }
 }
