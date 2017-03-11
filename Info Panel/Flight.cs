@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Info_Panel
 {
-    class Flight
+    public class Flight
     {
-
+        
+       
     }
 }

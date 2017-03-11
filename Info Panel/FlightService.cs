@@ -8,16 +8,16 @@ namespace Info_Panel
 {
     class FlightService
     {
-        private List<FlightModels> flights = new List<FlightModels>();
+        private  List<FlightModels> flights = new List<FlightModels>();
         
         public void AddFlight(FlightModels flight)
         {
             flights.Add(flight);
         }
 
-        public void RemoveFlight(int flightId)
+        public void RemoveFlight()
         {
-            
+           
         }
 
         public void EditFlight(FlightModels flight)
@@ -39,11 +39,6 @@ namespace Info_Panel
                 }
             }
 
-        }
-
-        public T Find<T>(int fNum) where T : FlightModels, new()
-        {
-            return null;
         }
 
     }
